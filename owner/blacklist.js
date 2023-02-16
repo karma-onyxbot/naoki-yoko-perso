@@ -26,12 +26,7 @@ module.exports = {
                if (!member)  return message.channel.send(`Aucun membre trouvé pour \`${args[0] || "rien"}\``)
 
 
-               if (config.app.owners.includes(message.author.id) || config.app.funny.includes(member.id) === true ) {
-                return message.reply(`Vous ne pouvez pas ban un membre au dessus de vous`)
-            }
 
-          
-           
                 
 
                 if (db.get(`blacklist.${member.id}`) === member.id) { return message.channel.send(`${member.username} est déjà blacklist`) }
