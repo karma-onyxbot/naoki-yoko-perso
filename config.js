@@ -2,8 +2,8 @@ module.exports = {
     app: {
         px: '+',
         token: '',
-        owners: ["1055889359334813847", "],
-        funny: '1055889359334813847',
+        owners: [""],
+        funny: '',
         color: '#2f3136',
         footer: 'by Funny & Remade by karma_#0281 & NotSans#1870',
         maxserver: '100',
