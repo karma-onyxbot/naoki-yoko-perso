@@ -34,7 +34,7 @@ module.exports = {
             if (member.id === message.author.id) {
                 return message.reply("Tu ne peux pas te bannir !")
             }
-
+    if (owner.get(`owners.${message.author.id}`) || config.app.owners.includes(message.author.id) || config.app.funny.includes(message.author.id) === true) return;
 
             let reason = args.slice(1).join(" ") || `Aucune raison`
 
