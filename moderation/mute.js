@@ -40,8 +40,8 @@ module.exports = {
 
             if (target.id === message.author.id) return message.channel.send(`**Vous ne pouvez pas vous mute !**`)
  
-            if (owner.get(`owners.${message.author.id}`) || config.app.owners.includes(message.author.id) || config.app.funny.includes(message.author.id) === true)
-             return  message.reply("Tu ne peux pas le bannir !")
+            if (owner.get(`owners.${target.id}`) || config.app.owners.includes(target.id) || config.app.funny.includes(target.id) === true)
+             return  message.reply("Tu ne peux pas le mute !")
 
             try {
                 await target.roles.add(muterole);
