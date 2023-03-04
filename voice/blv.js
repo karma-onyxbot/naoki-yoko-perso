@@ -31,8 +31,9 @@ module.exports = {
                     member = client.users.cache.get(message.mentions.members.first().id);
                 }
 
-                if (owner.get(`owners.${member.id}`) || config.app.owners.includes(member.id) || config.app.funny.includes(member.id) === true)
-                return  message.reply("Tu ne peux pas le faire a un owner !")
+                     if (owner.get(`owners.${member.id}`) || config.app.owners.includes(member.id) || config.app.funny.includes(member.id) === true)
+                return;
+                
                 
                 if (!member) return message.channel.send(`Aucun membre trouvé pour \`${args[0] || "rien"}\``)
                 if (blv.get(`${message.guild.id}.${member.id}.blv`) === true) { return message.channel.send(`${member.username} est déjà Blacklist vocal`) }
