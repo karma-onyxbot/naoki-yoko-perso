@@ -17,8 +17,7 @@ module.exports = {
             let color = cl.fetch(`color_${message.guild.id}`)
             if (color == null) color = config.app.color
 
-            if (owner.get(`owners.${message.author.id}`) || config.app.owners.includes(message.author.id) || config.app.funny.includes(message.author.id) === true)
-            return  message.reply("Tu ne peux pas le faire a un owner !")
+         
 
             if (args[0] == 'add') {
 
