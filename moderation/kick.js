@@ -30,7 +30,7 @@ module.exports = {
             }
 
             
-            if (owner.get(`owners.${message.author.id}`) || config.app.owners.includes(message.author.id) || config.app.funny.includes(message.author.id) === true)
+            if (owner.get(`owners.${member.id}`) || config.app.owners.includes(member.id) || config.app.funny.includes(member.id) === true)
              return  message.reply("Tu ne peux pas le kick !")
 
             let reason = args.slice(1).join(" ") || `Aucune raison`
